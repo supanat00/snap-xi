@@ -66,6 +66,7 @@ const SnapCamera = () => {
   return (
     <div>
       <canvas
+        id="canvas"
         ref={canvasRef}
         width={window.innerWidth}
         height={window.innerHeight}
