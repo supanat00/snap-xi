@@ -42,17 +42,19 @@ const SnapCamera = () => {
     init();
   }, []);
 
-  const setCameraKitSource = async (session, deviceId) => {
+  const setCameraKitSource = async (session) => {
     if (mediaStream) {
       session.pause();
       mediaStream.getVideoTracks()[0].stop();
     }
 
     mediaStream = await navigator.mediaDevices.getUserMedia({
-      video: { deviceId },
+      video: { facingMode: "environment" },
     });
 
-    const source = createMediaStreamSource(mediaStream, { cameraType: "back" });
+    const source = await createMediaStreamSource(mediaStream, {
+      cameraType: "back",
+    });
 
     await session.setSource(source);
 
@@ -66,13 +68,13 @@ const SnapCamera = () => {
 
     cameras.forEach((camera) => {
       const option = document.createElement("option");
-      //   option.value = camera.deviceId;
+      option.value = camera.deviceId;
       option.text = camera.label;
       cameraSelectRef.current.appendChild(option);
     });
 
     cameraSelectRef.current.addEventListener("change", (event) => {
-      const deviceId = event.target.selectedOptions[0];
+      const deviceId = event.target.selectedOptions[0].value;
       setCameraKitSource(session, deviceId);
     });
   };
