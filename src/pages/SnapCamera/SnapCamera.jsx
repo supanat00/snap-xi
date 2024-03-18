@@ -96,17 +96,14 @@ const SnapCamera = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" style={{ width: "100vw", height: "100vh" }}>
       <canvas
         ref={canvasRef}
         id="canvas-container"
-        width="1920"
-        height="1080"
+        width={window.innerWidth}
+        height={window.innerHeight}
+        style={{ width: "100%", height: "100%" }}
       ></canvas>
-      <div className="footer">
-        <select ref={cameraSelectRef} className="styled-select"></select>
-        <select ref={lensSelectRef} className="styled-select"></select>
-      </div>
     </div>
   );
 };
