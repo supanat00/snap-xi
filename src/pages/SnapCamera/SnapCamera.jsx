@@ -66,7 +66,7 @@ const SnapCamera = () => {
   };
 
   return (
-    <div className="container" style={{ width: "100vw", height: "100vh" }}>
+    <div>
       <canvas
         ref={canvasRef}
         width={window.innerWidth}
