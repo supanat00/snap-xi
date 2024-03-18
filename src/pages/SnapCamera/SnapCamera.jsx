@@ -13,15 +13,6 @@ import "./SnapCamera.css";
 let mediaStream;
 
 const SnapCamera = () => {
-  const [mediaRecorder, setMediaRecorder] = useState(null);
-  const [downloadUrl, setDownloadUrl] = useState("");
-  const liveRenderTarget = document.getElementById("canvas");
-  const videoContainer = document.getElementById("video-container");
-  const videoTarget = document.getElementById("video");
-  const startRecordingButton = document.getElementById("start");
-  const stopRecordingButton = document.getElementById("stop");
-  const downloadButton = document.getElementById("download");
-
   const canvasRef = useRef(null);
   const apiToken =
     "eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzEwNzM2MTQzLCJzdWIiOiI5YTIwZDg0My1mMzMyLTRhMDEtOTA5OC0yZDk3OWRiZmNmNTB-U1RBR0lOR34wNjUzYmVmYi1lMmFlLTQ1Y2ItYmE4NC04ZjZiNzYyNzEyZWUifQ.I12hk9toGRbKuCHKHCosWvF4QQQvohb_wxNOCVFxbl8";
