@@ -31,7 +31,7 @@ const SnapCamera = () => {
       const { lenses } = await cameraKit.lenses.repository.loadLensGroups([
         lensGroupId,
       ]);
-      session.applyLens(lenses[19]);
+      session.applyLens(lenses[0]);
       await setCameraKitSource(session);
       await attachCamerasToSelect(session);
       console.log("attachCamerasToSelect is called");
@@ -52,11 +52,9 @@ const SnapCamera = () => {
       video: { deviceId },
     });
 
-    const source = createMediaStreamSource(mediaStream);
+    const source = createMediaStreamSource(mediaStream, { cameraType: "back" });
 
     await session.setSource(source);
-
-    source.setTransform(Transform2D.MirrorX);
 
     session.play();
   };
