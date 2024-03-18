@@ -11,8 +11,9 @@ let mediaStream;
 
 const SnapCamera = () => {
   const canvasRef = useRef(null);
-  const apiToken = process.env.REACT_APP_API_TOKEN;
-  const lensGroupId = process.env.REACT_APP_LENS_GROUP_ID;
+  const apiToken =
+    "eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzEwNzM2MTQzLCJzdWIiOiI5YTIwZDg0My1mMzMyLTRhMDEtOTA5OC0yZDk3OWRiZmNmNTB-U1RBR0lOR34wNjUzYmVmYi1lMmFlLTQ1Y2ItYmE4NC04ZjZiNzYyNzEyZWUifQ.I12hk9toGRbKuCHKHCosWvF4QQQvohb_wxNOCVFxbl8";
+  const lensGroupId = "d63b3d4c-e03c-43ee-9477-e3970943eac7";
   const cameraSelectRef = useRef(null);
   const lensSelectRef = useRef(null);
 
