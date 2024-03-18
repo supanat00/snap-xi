@@ -1,3 +1,4 @@
 #canvas-container {
-  /* canvas için özel stiller buraya gelebilir, eğer gerekliyse */
+  width: "100vh";
+  height: "200px";
 }
