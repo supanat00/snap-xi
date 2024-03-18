@@ -104,7 +104,7 @@ const SnapCamera = () => {
         height="1080"
       ></canvas>
       <div className="footer">
-        {/* <select ref={cameraSelectRef} className="styled-select"></select> */}
+        <select ref={cameraSelectRef} className="styled-select"></select>
         <select ref={lensSelectRef} className="styled-select"></select>
       </div>
     </div>
