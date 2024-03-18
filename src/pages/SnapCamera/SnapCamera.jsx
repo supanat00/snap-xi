@@ -70,6 +70,7 @@ const SnapCamera = () => {
         width={window.innerWidth}
         height={window.innerHeight}
       ></canvas>
+      <video id="video"></video>
     </div>
   );
 };
