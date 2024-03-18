@@ -100,8 +100,6 @@ const SnapCamera = () => {
       <canvas
         ref={canvasRef}
         id="canvas-container"
-        width={window.innerWidth}
-        height={window.innerHeight}
         style={{ width: "100%", height: "100%" }}
       ></canvas>
     </div>
