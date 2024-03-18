@@ -56,27 +56,9 @@ const SnapCamera = () => {
 
     await session.setSource(source);
 
-    source.setTransform(Transform2D.MirrorX);
+    source.setTransform();
 
     session.play();
-  };
-
-  const attachCamerasToSelect = async (session) => {
-    cameraSelectRef.current.innerHTML = "";
-    const devices = await navigator.mediaDevices.enumerateDevices();
-    const cameras = devices.filter(({ kind }) => kind === "videoinput");
-
-    cameras.forEach((camera) => {
-      const option = document.createElement("option");
-      option.value = camera.deviceId;
-      option.text = camera.label;
-      cameraSelectRef.current.appendChild(option);
-    });
-
-    cameraSelectRef.current.addEventListener("change", (event) => {
-      const deviceId = event.target.selectedOptions[0].value;
-      setCameraKitSource(session, deviceId);
-    });
   };
 
   const attachLensesToSelect = async (lenses, session) => {
@@ -104,7 +86,6 @@ const SnapCamera = () => {
         height="1080"
       ></canvas>
       <div className="footer">
-        <select ref={cameraSelectRef} className="styled-select"></select>
         <select ref={lensSelectRef} className="styled-select"></select>
       </div>
     </div>
