@@ -44,7 +44,7 @@ const SnapCamera = () => {
       mediaStream.getVideoTracks()[0].stop();
     }
 
-    const mediaStream = await navigator.mediaDevices.getUserMedia({
+    mediaStream = await navigator.mediaDevices.getUserMedia({
       video: {
         facingMode: "environment",
       },
