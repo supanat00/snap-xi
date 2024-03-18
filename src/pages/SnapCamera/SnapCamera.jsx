@@ -102,12 +102,6 @@ const SnapCamera = () => {
         id="canvas-container"
         width={window.innerWidth}
         height={window.innerHeight}
-        style={{
-          width: "100%",
-          height: "100%",
-          top: 0,
-          left: 0,
-        }}
       ></canvas>
     </div>
   );
