@@ -55,7 +55,10 @@ const SnapCamera = () => {
     });
 
     await session.setSource(source);
-    await session.setFPSLimit(60);
+    await session.setFPSLimit(120);
+
+    // Set the render size of the CameraKit session to the size of the browser window.
+    session.source.setRenderSize(window.innerWidth, window.innerHeight);
 
     session.play();
   };
