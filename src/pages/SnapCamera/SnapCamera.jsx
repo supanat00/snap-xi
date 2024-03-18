@@ -33,7 +33,7 @@ const SnapCamera = () => {
       ]);
       session.applyLens(lenses[0]);
       await setCameraKitSource(session);
-      await attachCamerasToSelect(session);
+
       console.log("attachCamerasToSelect is called");
       await attachLensesToSelect(lenses, session);
       console.log("attachLensesToSelect is called");
@@ -59,24 +59,6 @@ const SnapCamera = () => {
     await session.setSource(source);
 
     session.play();
-  };
-
-  const attachCamerasToSelect = async (session) => {
-    cameraSelectRef.current.innerHTML = "";
-    const devices = await navigator.mediaDevices.enumerateDevices();
-    const cameras = devices.filter(({ kind }) => kind === "videoinput");
-
-    cameras.forEach((camera) => {
-      const option = document.createElement("option");
-      option.value = camera.deviceId;
-      option.text = camera.label;
-      cameraSelectRef.current.appendChild(option);
-    });
-
-    cameraSelectRef.current.addEventListener("change", (event) => {
-      const deviceId = event.target.selectedOptions[0].value;
-      setCameraKitSource(session, deviceId);
-    });
   };
 
   const attachLensesToSelect = async (lenses, session) => {
