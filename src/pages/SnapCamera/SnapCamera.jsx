@@ -46,11 +46,15 @@ const SnapCamera = () => {
 
     const mediaStream = await navigator.mediaDevices.getUserMedia({
       video: {
-        facingMode: { ideal: "environment" },
+        facingMode: { exact: "environment" },
       },
     });
 
-    await session.setSource(mediaStream, { cameraType: "back" });
+    const source = await createMediaStreamSource(mediaStream, {
+      cameraType: "back",
+    });
+
+    await session.setSource(source);
     // await session.setFPSLimit(60);
 
     // Set the render size of the CameraKit session to the size of the browser window.
