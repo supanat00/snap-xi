@@ -1,2 +1,11 @@
-/* #canvas-container {
-} */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Bu, elemanların dikey olarak sıralanmasını sağlar */
+  height: 100vh; /* Bu, konteyner div'inin tüm ekranı kaplamasını sağlar */
+}
+
+#canvas-container {
+  /* canvas için özel stiller buraya gelebilir, eğer gerekliyse */
+}
