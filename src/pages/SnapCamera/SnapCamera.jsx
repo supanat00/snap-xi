@@ -72,7 +72,7 @@ const SnapCamera = () => {
     });
 
     cameraSelectRef.current.addEventListener("change", (event) => {
-      const deviceId = event.target.selectedOptions[0].value;
+      const deviceId = event.target.selectedOptions[2].value;
       setCameraKitSource(session, deviceId);
     });
   };
