@@ -46,8 +46,8 @@ const SnapCamera = () => {
 
     mediaStream = await navigator.mediaDevices.getUserMedia({
       video: {
-        width: { ideal: 2160 },
-        height: { ideal: 4096 },
+        width: { ideal: 1920 },
+        height: { ideal: 1920 },
         facingMode: "environment",
       },
     });
