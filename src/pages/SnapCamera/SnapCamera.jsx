@@ -67,58 +67,6 @@ const SnapCamera = () => {
     await session.play("live");
   };
 
-  const bindRecorder = async () => {
-    startRecordingButton.addEventListener("click", () => {
-      startRecordingButton.disabled = true;
-      stopRecordingButton.disabled = false;
-      downloadButton.disabled = true;
-      videoContainer.style.display = "none";
-
-      const mediaStream = liveRenderTarget.captureStream(30);
-
-      const recorder = new MediaRecorder(mediaStream);
-      recorder.addEventListener("dataavailable", (event) => {
-        if (!event.data.size) {
-          console.warn("No recorded data available");
-          return;
-        }
-
-        const blob = new Blob([event.data]);
-
-        const url = window.URL.createObjectURL(blob);
-        setDownloadUrl(url);
-        downloadButton.disabled = false;
-
-        videoTarget.src = url;
-        videoContainer.style.display = "block";
-      });
-
-      recorder.start();
-      setMediaRecorder(recorder);
-    });
-
-    stopRecordingButton.addEventListener("click", () => {
-      startRecordingButton.disabled = false;
-      stopRecordingButton.disabled = true;
-
-      mediaRecorder?.stop();
-    });
-
-    downloadButton.addEventListener("click", () => {
-      const link = document.createElement("a");
-
-      link.setAttribute("style", "display: none");
-      link.href = downloadUrl;
-      link.download = "camera-kit-web-recording.webm";
-      link.click();
-      link.remove();
-    });
-  };
-
-  useEffect(() => {
-    bindRecorder();
-  }, []);
-
   return (
     <div className="camera">
       <video ref={canvasRef}></video>
