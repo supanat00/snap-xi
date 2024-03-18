@@ -4,7 +4,6 @@ import {
   bootstrapCameraKit,
   CameraKitSession,
   createMediaStreamSource,
-  Transform2D,
   Lens,
 } from "@snap/camera-kit";
 
@@ -58,9 +57,9 @@ const SnapCamera = () => {
     // await session.setFPSLimit(60);
 
     // Set the render size of the CameraKit session to the size of the browser window.
-    session.source.setRenderSize(window.innerWidth, window.innerHeight);
+    await session.source.setRenderSize(window.innerWidth, window.innerHeight);
 
-    session.play();
+    await session.play("live");
   };
 
   return (
