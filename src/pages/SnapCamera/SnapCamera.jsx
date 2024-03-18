@@ -6,7 +6,7 @@ import {
   createMediaStreamSource,
   Lens,
 } from "@snap/camera-kit";
-
+import "../../index.css";
 import "./SnapCamera.css";
 let mediaStream;
 
