@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Import the necessary Camera Kit modules.
 import {
   bootstrapCameraKit,
@@ -6,9 +6,10 @@ import {
   createMediaStreamSource,
   Lens,
 } from "@snap/camera-kit";
+
+// Import Styles
 import "../../index.css";
 import "./SnapCamera.css";
-let mediaStream;
 
 const SnapCamera = () => {
   const canvasRef = useRef(null);
@@ -43,7 +44,7 @@ const SnapCamera = () => {
       mediaStream.getVideoTracks()[0].stop();
     }
 
-    mediaStream = await navigator.mediaDevices.getUserMedia({
+    const mediaStream = await navigator.mediaDevices.getUserMedia({
       video: {
         facingMode: "environment",
       },
