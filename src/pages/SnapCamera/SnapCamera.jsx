@@ -30,7 +30,7 @@ const SnapCamera = () => {
       const { lenses } = await cameraKit.lenses.repository.loadLensGroups([
         lensGroupId,
       ]);
-      session.applyLens(lenses[19]);
+      session.applyLens(lenses[1]);
       await setCameraKitSource(session);
       await attachCamerasToSelect(session);
       console.log("attachCamerasToSelect is called");
