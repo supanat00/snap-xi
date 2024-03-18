@@ -45,7 +45,9 @@ const SnapCamera = () => {
     }
 
     mediaStream = await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: { exact: "environment" } },
+      video: {
+        facingMode: "environment",
+      },
     });
 
     const source = await createMediaStreamSource(mediaStream, {
@@ -68,7 +70,6 @@ const SnapCamera = () => {
         width={window.innerWidth}
         height={window.innerHeight}
       ></canvas>
-      <video id="video"></video>
     </div>
   );
 };
