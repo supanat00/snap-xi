@@ -46,16 +46,6 @@ const SnapCamera = () => {
 
     mediaStream = await navigator.mediaDevices.getUserMedia({
       video: {
-        width: {
-          min: 1280,
-          ideal: 1920,
-          max: 2560,
-        },
-        height: {
-          min: 720,
-          ideal: 1080,
-          max: 1440,
-        },
         facingMode: {
           exact: "environment",
         },
@@ -76,8 +66,12 @@ const SnapCamera = () => {
   };
 
   return (
-    <div className="container">
-      <canvas ref={canvasRef}></canvas>
+    <div>
+      <canvas
+        ref={canvasRef}
+        width={window.innerWidth}
+        height={window.innerHeight}
+      ></canvas>
     </div>
   );
 };
