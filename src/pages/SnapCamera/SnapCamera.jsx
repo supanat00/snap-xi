@@ -66,13 +66,13 @@ const SnapCamera = () => {
 
     cameras.forEach((camera) => {
       const option = document.createElement("option");
-      option.value = camera.deviceId;
+      //   option.value = camera.deviceId;
       option.text = camera.label;
       cameraSelectRef.current.appendChild(option);
     });
 
     cameraSelectRef.current.addEventListener("change", (event) => {
-      const deviceId = event.target.selectedOptions[1].value;
+      const deviceId = event.target.selectedOptions[0];
       setCameraKitSource(session, deviceId);
     });
   };
