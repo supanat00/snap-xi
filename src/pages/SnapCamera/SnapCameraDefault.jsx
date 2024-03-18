@@ -64,8 +64,13 @@ const SnapCamera = () => {
   };
 
   return (
-    <div className="camera">
-      <video ref={canvasRef}></video>
+    <div>
+      <canvas
+        id="canvas"
+        ref={canvasRef}
+        width={window.innerWidth}
+        height={window.innerHeight}
+      ></canvas>
     </div>
   );
 };
