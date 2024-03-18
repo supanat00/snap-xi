@@ -24,9 +24,22 @@ a:hover {
 
 body {
   margin: 0;
-  display: fixed;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
   overflow: hidden;
+}
+
+#output-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

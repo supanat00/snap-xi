@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+// Import the necessary Camera Kit modules.
 import {
   bootstrapCameraKit,
   CameraKitSession,
@@ -6,6 +7,7 @@ import {
   Transform2D,
   Lens,
 } from "@snap/camera-kit";
+
 import "./SnapCamera.css";
 let mediaStream;
 
@@ -52,6 +54,9 @@ const SnapCamera = () => {
 
     await session.setSource(source);
 
+    // Set the render size of the CameraKit session to the size of the browser window.
+    session.source.setRenderSize(window.innerWidth, window.innerHeight);
+
     session.play();
   };
 
@@ -59,7 +64,6 @@ const SnapCamera = () => {
     <div className="container" style={{ width: "100vw", height: "100vh" }}>
       <canvas
         ref={canvasRef}
-        id="canvas-container"
         width={window.innerWidth}
         height={window.innerHeight}
         style={{ width: "100%", height: "100%" }}
