@@ -68,11 +68,13 @@ const SnapCamera = () => {
   return (
     <div className="camera">
       {/* สร้างปุ่ม */}
-      <button>
-        {/* ใส่รูปภาพแทนไอคอน */}
-        <img src={"../../assets/info.png"} alt="Info" />
-      </button>
-      <video ref={canvasRef}></video>
+
+      <video ref={canvasRef}>
+        <button>
+          {/* ใส่รูปภาพแทนไอคอน */}
+          <img src={"../../assets/info.png"} alt="Info" />
+        </button>
+      </video>
     </div>
   );
 };
