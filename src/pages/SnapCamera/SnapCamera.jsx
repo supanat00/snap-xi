@@ -11,8 +11,6 @@ import {
 import "../../index.css";
 import "./SnapCamera.css";
 
-import Info from "../../assets/info.png";
-
 let mediaStream;
 
 const SnapCamera = () => {
@@ -69,13 +67,11 @@ const SnapCamera = () => {
 
   return (
     <div className="camera">
-      <div>
-        {/* สร้างปุ่ม */}
-        <button>
-          {/* ใส่รูปภาพแทนไอคอน */}
-          <img src="Info" alt="Info" />
-        </button>
-      </div>
+      {/* สร้างปุ่ม */}
+      <button>
+        {/* ใส่รูปภาพแทนไอคอน */}
+        <img src={"../../assets/info.png"} alt="Info" />
+      </button>
       <video ref={canvasRef}></video>
     </div>
   );
