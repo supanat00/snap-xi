@@ -154,13 +154,8 @@ const SnapCamera = () => {
           />
           <button
             style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              padding: 0,
               border: "none",
               background: "none",
-              margin: "10px", // เพิ่มระยะห่างจากขอบจอ
               width: "50px",
               height: "50px",
             }}
