@@ -16,6 +16,12 @@ import Info from "../../assets/info.png";
 let mediaStream;
 
 const SnapCamera = () => {
+  const [showInfo, setShowInfo] = useState(false);
+
+  const toggleInfo = () => {
+    setShowInfo(!showInfo);
+  };
+
   const canvasRef = useRef(null);
   const apiToken =
     "eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzEwNzM2MTQzLCJzdWIiOiI5YTIwZDg0My1mMzMyLTRhMDEtOTA5OC0yZDk3OWRiZmNmNTB-U1RBR0lOR34wNjUzYmVmYi1lMmFlLTQ1Y2ItYmE4NC04ZjZiNzYyNzEyZWUifQ.I12hk9toGRbKuCHKHCosWvF4QQQvohb_wxNOCVFxbl8";
@@ -79,12 +85,36 @@ const SnapCamera = () => {
           border: "none",
           background: "none",
           margin: "10px", // เพิ่มระยะห่างจากขอบจอ
+          width: "60px",
+          height: "60px",
         }}
+        onClick={toggleInfo}
       >
         {/* ใส่รูปภาพแทนไอคอน */}
-        <img src={Info} alt="Info" style={{ width: "20px", height: "20px" }} />
+        <img src={Info} alt="Info" style={{ width: "60px", height: "60px" }} />
       </button>
       <video ref={canvasRef}></video>
+
+      {/* หน้าต่างคำแนะนำ */}
+      {showInfo && (
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            padding: "20px",
+            background: "#fff",
+            border: "1px solid #000",
+            borderRadius: "10px",
+            zIndex: "999",
+          }}
+        >
+          <h2>คำแนะนำ</h2>
+          <p>เพิ่มคำแนะนำที่นี่</p>
+          <button onClick={toggleInfo}>ปิด</button>
+        </div>
+      )}
     </div>
   );
 };
