@@ -24,7 +24,7 @@ import exit from "../../assets/exit.png";
 let mediaStream;
 
 const SnapCamera = () => {
-  const [showInfo, setShowInfo, isInfoVisible] = useState(true);
+  const [showInfo, setShowInfo] = useState(true);
 
   const toggleInfo = () => {
     setShowInfo(!showInfo);
@@ -100,7 +100,7 @@ const SnapCamera = () => {
       >
         <img src={Info} alt="Info" style={{ width: "60px", height: "60px" }} />
       </button>
-      ;<video ref={canvasRef}></video>
+      <video ref={canvasRef}></video>
       {/* หน้าต่างคำแนะนำ */}
       {showInfo && (
         <div
