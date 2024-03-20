@@ -152,17 +152,24 @@ const SnapCamera = () => {
             alt="punch"
             style={{ width: "250px", marginBottom: "10px" }}
           />
-          <button onClick={toggleInfo}>
+          <button
+            style={{
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+              padding: 0,
+              border: "none",
+              background: "none",
+              margin: "10px", // เพิ่มระยะห่างจากขอบจอ
+              width: "50px",
+              height: "50px",
+            }}
+            onClick={toggleInfo}
+          >
             <img
               src={exit}
               alt="exit"
-              style={{
-                width: "60px",
-                height: "60px",
-                marginTop: "10px",
-                border: "none",
-                background: "none",
-              }}
+              style={{ width: "60px", height: "60px", marginTop: "10px" }}
             />
           </button>
         </div>
