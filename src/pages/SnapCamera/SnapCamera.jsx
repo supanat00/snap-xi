@@ -70,7 +70,10 @@ const SnapCamera = () => {
   return (
     <div className="camera" style={{ position: "relative" }}>
       {/* สร้างปุ่ม */}
-      <button style={{ position: "absolute", top: 0, right: 0 }}>
+      <button
+        className="infoButton"
+        style={{ position: "absolute", top: 0, right: 0 }}
+      >
         {/* ใส่รูปภาพแทนไอคอน */}
         <img src={Info} alt="Info" />
       </button>
