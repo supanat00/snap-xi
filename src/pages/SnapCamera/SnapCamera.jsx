@@ -24,10 +24,11 @@ import exit from "../../assets/exit.png";
 let mediaStream;
 
 const SnapCamera = () => {
-  const [showInfo, isInfoVisible, setIsInfoVisible] = useState(true);
+  const [showInfo, setShowInfo, isInfoVisible, setIsInfoVisible] =
+    useState(true);
 
   const toggleInfo = () => {
-    setIsInfoVisible(!isInfoVisible); // สลับค่า isInfoVisible
+    setShowInfo(!showInfo);
   };
 
   const canvasRef = useRef(null);
@@ -93,17 +94,25 @@ const SnapCamera = () => {
           border: "none",
           background: "none",
           margin: "10px", // เพิ่มระยะห่างจากขอบจอ
-          width: "50px",
-          height: "50px",
+          width: "60px",
+          height: "60px",
         }}
         onClick={toggleInfo}
       >
-        {/* ใส่รูปภาพแทนไอคอน */}
-        <img
-          src={isInfoVisible ? exit : Info} // ใช้เงื่อนไข isInfoVisible เพื่อเลือก URL ของรูปภาพ
-          alt={isInfoVisible ? "exit" : "Info"} // ใช้เงื่อนไข isInfoVisible เพื่อเลือกคำอธิบายของรูปภาพ
-          style={{ width: "60px", height: "60px" }}
-        />
+        {/* ใช้เงื่อนไข isInfoVisible เพื่อสลับระหว่างรูปภาพ Info และ exit */}
+        {isInfoVisible ? (
+          <img
+            src={exit}
+            alt="exit"
+            style={{ width: "100%", height: "100%" }}
+          />
+        ) : (
+          <img
+            src={Info}
+            alt="Info"
+            style={{ width: "100%", height: "100%" }}
+          />
+        )}
       </button>
 
       <video ref={canvasRef}></video>
