@@ -109,13 +109,13 @@ const SnapCamera = () => {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
+
             border: "none",
             background: "none",
             zIndex: "999",
           }}
         >
-          <img src={HandGes} alt="Info" style={{ width: "100px" }} />
+          <img src={HandGes} alt="Info" style={{ width: "500px" }} />
           <button onClick={toggleInfo}>ปิด</button>
         </div>
       )}
