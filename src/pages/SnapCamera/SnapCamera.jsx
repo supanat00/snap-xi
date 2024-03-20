@@ -24,9 +24,10 @@ import exit from "../../assets/exit.png";
 let mediaStream;
 
 const SnapCamera = () => {
-  const [showInfo, isInfoVisible, setIsInfoVisible] = useState(true);
+  const [showInfo, setShowInfo, isInfoVisible] = useState(true);
+
   const toggleInfo = () => {
-    setIsInfoVisible(!isInfoVisible); // เมื่อกดปุ่มให้สลับค่าของ isInfoVisible
+    setShowInfo(!showInfo);
   };
 
   const canvasRef = useRef(null);
