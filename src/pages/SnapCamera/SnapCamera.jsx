@@ -19,6 +19,7 @@ import summon from "../../assets/summon.png";
 import dance from "../../assets/ToDance.png";
 import punch from "../../assets/ToPunch.png";
 import twirl from "../../assets/twirl.png";
+import exit from "../../assets/exit.png";
 
 let mediaStream;
 
@@ -98,8 +99,13 @@ const SnapCamera = () => {
         onClick={toggleInfo}
       >
         {/* ใส่รูปภาพแทนไอคอน */}
-        <img src={Info} alt="Info" style={{ width: "60px", height: "60px" }} />
+        <img
+          src={isInfoVisible ? Exit : Info} // ใช้เงื่อนไข isInfoVisible เพื่อเลือก URL ของรูปภาพ
+          alt={isInfoVisible ? "Exit" : "Info"} // ใช้เงื่อนไข isInfoVisible เพื่อเลือกคำอธิบายของรูปภาพ
+          style={{ width: "60px", height: "60px" }}
+        />
       </button>
+
       <video ref={canvasRef}></video>
 
       {/* หน้าต่างคำแนะนำ */}
