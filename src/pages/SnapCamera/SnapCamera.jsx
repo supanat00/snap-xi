@@ -118,13 +118,41 @@ const SnapCamera = () => {
             alignItems: "center", // จัดตำแหน่งกลาง
           }}
         >
-          <img src={HandGes} alt="handgesture" style={{ width: "200px" }} />
-          <img src={summon} alt="summon" style={{ width: "200px" }} />
-          <img src={costume} alt="costume" style={{ width: "200px" }} />
-          <img src={play} alt="play" style={{ width: "200px" }} />
-          <img src={dance} alt="dance" style={{ width: "200px" }} />
-          <img src={twirl} alt="twirl" style={{ width: "200px" }} />
-          <img src={punch} alt="punch" style={{ width: "200px" }} />
+          <img
+            src={HandGes}
+            alt="handgesture"
+            style={{ width: "250px", marginBottom: "10px" }}
+          />
+          <img
+            src={summon}
+            alt="summon"
+            style={{ width: "250px", marginBottom: "10px" }}
+          />
+          <img
+            src={costume}
+            alt="costume"
+            style={{ width: "250px", marginBottom: "10px" }}
+          />
+          <img
+            src={play}
+            alt="play"
+            style={{ width: "250px", marginBottom: "10px" }}
+          />
+          <img
+            src={dance}
+            alt="dance"
+            style={{ width: "250px", marginBottom: "10px" }}
+          />
+          <img
+            src={twirl}
+            alt="twirl"
+            style={{ width: "250px", marginBottom: "10px" }}
+          />
+          <img
+            src={punch}
+            alt="punch"
+            style={{ width: "250px", marginBottom: "10px" }}
+          />
         </div>
       )}
     </div>
