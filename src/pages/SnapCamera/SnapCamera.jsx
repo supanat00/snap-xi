@@ -12,6 +12,13 @@ import "../../index.css";
 import "./SnapCamera.css";
 
 import Info from "../../assets/info.png";
+import costume from "../../assets/costume.png";
+import HandGes from "../../assets/HandGes.png";
+import play from "../../assets/play.png";
+import summon from "../../assets/summon.png";
+import dance from "../../assets/ToDance.png";
+import punch from "../../assets/ToPunch.png";
+import twirl from "../../assets/twirl.png";
 
 let mediaStream;
 
@@ -102,19 +109,13 @@ const SnapCamera = () => {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-20%, -15%)",
-            padding: "20px",
-            background: "#fff",
-            border: "1px solid #000",
-            borderRadius: "10px",
+            transform: "translate(-50%, -50%)",
+            border: "none",
+            background: "none",
             zIndex: "999",
           }}
         >
-          <img
-            src={Info}
-            alt="Info"
-            style={{ width: "60px", height: "60px" }}
-          />
+          <img src={HandGes} alt="Info" style={{ width: "100px" }} />
           <button onClick={toggleInfo}>ปิด</button>
         </div>
       )}
