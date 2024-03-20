@@ -154,9 +154,15 @@ const SnapCamera = () => {
           />
           <button onClick={toggleInfo}>
             <img
-              src={Info}
-              alt="Info"
-              style={{ width: "60px", height: "60px", marginTop: "10px" }}
+              src={exit}
+              alt="exit"
+              style={{
+                width: "60px",
+                height: "60px",
+                marginTop: "10px",
+                border: "none",
+                background: "none",
+              }}
             />
           </button>
         </div>
