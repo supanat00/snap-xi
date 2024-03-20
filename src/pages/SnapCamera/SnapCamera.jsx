@@ -109,7 +109,7 @@ const SnapCamera = () => {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
+
             border: "none",
             background: "none",
             zIndex: "999",
@@ -125,7 +125,6 @@ const SnapCamera = () => {
           <img src={dance} alt="dance" style={{ width: "200px" }} />
           <img src={twirl} alt="twirl" style={{ width: "200px" }} />
           <img src={punch} alt="punch" style={{ width: "200px" }} />
-          <button onClick={toggleInfo}>ปิด</button>
         </div>
       )}
     </div>
