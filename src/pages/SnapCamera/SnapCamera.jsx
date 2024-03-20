@@ -19,7 +19,6 @@ import summon from "../../assets/summon.png";
 import dance from "../../assets/ToDance.png";
 import punch from "../../assets/ToPunch.png";
 import twirl from "../../assets/twirl.png";
-import exit from "../../assets/exit.png";
 
 let mediaStream;
 
@@ -83,7 +82,7 @@ const SnapCamera = () => {
 
   return (
     <div className="camera" style={{ position: "relative" }}>
-      {/* สร้างปุ่ม Info */}
+      {/* สร้างปุ่ม */}
       <button
         style={{
           position: "absolute",
@@ -92,40 +91,17 @@ const SnapCamera = () => {
           padding: 0,
           border: "none",
           background: "none",
-          margin: "10px",
+          margin: "10px", // เพิ่มระยะห่างจากขอบจอ
           width: "50px",
           height: "50px",
         }}
         onClick={toggleInfo}
       >
-        {/* ใส่รูปภาพแทนไอคอน Info */}
+        {/* ใส่รูปภาพแทนไอคอน */}
         <img src={Info} alt="Info" style={{ width: "60px", height: "60px" }} />
       </button>
-      {/* ปุ่มปิด */}
-      {showInfo && (
-        <button
-          style={{
-            position: "absolute",
-            top: "10px",
-            right: "70px", // ปรับตำแหน่งตามความเหมาะสม
-            padding: 0,
-            border: "none",
-            background: "none",
-            margin: "10px",
-            width: "50px",
-            height: "50px",
-          }}
-          onClick={toggleInfo}
-        >
-          {/* ใส่รูปภาพแทนไอคอนปิด */}
-          <img
-            src={exit}
-            alt="Close"
-            style={{ width: "30px", height: "30px" }}
-          />
-        </button>
-      )}
       <video ref={canvasRef}></video>
+
       {/* หน้าต่างคำแนะนำ */}
       {showInfo && (
         <div
@@ -133,13 +109,14 @@ const SnapCamera = () => {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
+
             border: "none",
             background: "none",
             zIndex: "999",
           }}
         >
           <img src={HandGes} alt="Info" style={{ width: "500px" }} />
+          <button onClick={toggleInfo}>ปิด</button>
         </div>
       )}
     </div>
