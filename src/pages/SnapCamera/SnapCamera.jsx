@@ -117,9 +117,11 @@ const SnapCamera = () => {
         >
           <img src={HandGes} alt="handgesture" style={{ width: "500px" }} />
 
-          <button onClick={toggleInfo}>
-            <img src={summon} alt="summon" style={{ width: "200px" }} />
-          </button>
+          <img src={summon} alt="summon" style={{ width: "500px" }} />
+
+          <img src={costume} alt="summon" style={{ width: "500px" }} />
+          <img src={play} alt="summon" style={{ width: "500px" }} />
+          <img src={dance} alt="summon" style={{ width: "500px" }} />
         </div>
       )}
     </div>
