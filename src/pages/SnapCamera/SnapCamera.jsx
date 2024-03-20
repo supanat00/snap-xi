@@ -101,7 +101,7 @@ const SnapCamera = () => {
         {/* ใส่รูปภาพแทนไอคอน */}
         <img
           src={isInfoVisible ? exit : Info} // ใช้เงื่อนไข isInfoVisible เพื่อเลือก URL ของรูปภาพ
-          alt={isInfoVisible ? "Exit" : "Info"} // ใช้เงื่อนไข isInfoVisible เพื่อเลือกคำอธิบายของรูปภาพ
+          alt={isInfoVisible ? "exit" : "Info"} // ใช้เงื่อนไข isInfoVisible เพื่อเลือกคำอธิบายของรูปภาพ
           style={{ width: "60px", height: "60px" }}
         />
       </button>
