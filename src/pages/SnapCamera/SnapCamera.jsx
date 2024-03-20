@@ -71,11 +71,17 @@ const SnapCamera = () => {
     <div className="camera" style={{ position: "relative" }}>
       {/* สร้างปุ่ม */}
       <button
-        className="infoButton"
-        style={{ position: "absolute", top: 0, right: 0 }}
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          padding: 0,
+          border: "none",
+          background: "none",
+        }}
       >
         {/* ใส่รูปภาพแทนไอคอน */}
-        <img src={Info} alt="Info" />
+        <img src={Info} alt="Info" style={{ width: "20px", height: "20px" }} />
       </button>
       <video ref={canvasRef}></video>
     </div>
