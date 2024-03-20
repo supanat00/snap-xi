@@ -115,13 +115,13 @@ const SnapCamera = () => {
             zIndex: "999",
           }}
         >
-          <img src={HandGes} alt="handgesture" style={{ width: "500px" }} />
+          <img src={HandGes} alt="handgesture" style={{ width: "200px" }} />
 
-          <img src={summon} alt="summon" style={{ width: "500px" }} />
+          <img src={summon} alt="summon" style={{ width: "200px" }} />
 
-          <img src={costume} alt="summon" style={{ width: "500px" }} />
-          <img src={play} alt="summon" style={{ width: "500px" }} />
-          <img src={dance} alt="summon" style={{ width: "500px" }} />
+          <img src={costume} alt="costume" style={{ width: "200px" }} />
+          <img src={play} alt="play" style={{ width: "200px" }} />
+          <img src={dance} alt="dance" style={{ width: "200px" }} />
         </div>
       )}
     </div>
