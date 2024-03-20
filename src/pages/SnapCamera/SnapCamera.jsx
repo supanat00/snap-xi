@@ -23,7 +23,7 @@ import twirl from "../../assets/twirl.png";
 let mediaStream;
 
 const SnapCamera = () => {
-  const [showInfo, setShowInfo] = useState(false);
+  const [showInfo, setShowInfo] = useState(true);
 
   const toggleInfo = () => {
     setShowInfo(!showInfo);
@@ -113,15 +113,19 @@ const SnapCamera = () => {
             border: "none",
             background: "none",
             zIndex: "999",
+            display: "flex",
+            flexDirection: "column", // เรียงตามแนวตั้ง
+            alignItems: "center", // จัดตำแหน่งกลาง
           }}
         >
           <img src={HandGes} alt="handgesture" style={{ width: "200px" }} />
-
           <img src={summon} alt="summon" style={{ width: "200px" }} />
-
           <img src={costume} alt="costume" style={{ width: "200px" }} />
           <img src={play} alt="play" style={{ width: "200px" }} />
           <img src={dance} alt="dance" style={{ width: "200px" }} />
+          <img src={twirl} alt="twirl" style={{ width: "200px" }} />
+          <img src={punch} alt="punch" style={{ width: "200px" }} />
+          <button onClick={toggleInfo}>ปิด</button>
         </div>
       )}
     </div>
