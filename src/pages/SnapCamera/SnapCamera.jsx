@@ -85,8 +85,8 @@ const SnapCamera = () => {
           border: "none",
           background: "none",
           margin: "10px", // เพิ่มระยะห่างจากขอบจอ
-          width: "60px",
-          height: "60px",
+          width: "50px",
+          height: "50px",
         }}
         onClick={toggleInfo}
       >
@@ -102,7 +102,7 @@ const SnapCamera = () => {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-20%, -15%)",
             padding: "20px",
             background: "#fff",
             border: "1px solid #000",
@@ -110,8 +110,11 @@ const SnapCamera = () => {
             zIndex: "999",
           }}
         >
-          <h2>คำแนะนำ</h2>
-          <p>เพิ่มคำแนะนำที่นี่</p>
+          <img
+            src={Info}
+            alt="Info"
+            style={{ width: "60px", height: "60px" }}
+          />
           <button onClick={toggleInfo}>ปิด</button>
         </div>
       )}
